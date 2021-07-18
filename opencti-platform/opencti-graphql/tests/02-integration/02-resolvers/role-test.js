@@ -65,7 +65,7 @@ describe('Role resolver standard behavior', () => {
   });
   it('should list roles', async () => {
     const queryResult = await queryAsAdmin({ query: LIST_QUERY, variables: { first: 10 } });
-    expect(queryResult.data.roles.edges.length).toEqual(3);
+    expect(queryResult.data.roles.edges.length).toEqual(4);
   });
   it('should list capabilities', async () => {
     const LIST_CAPABILITIES_QUERY = gql`

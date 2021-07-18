@@ -229,6 +229,21 @@ export const createBasicRolesAndCapabilities = async () => {
     description: 'Administrator role that bypass every capabilities',
     capabilities: [BYPASS],
   });
+  await addRole(SYSTEM_USER, {
+    name: 'Connectors',
+    description: 'Connector role that has the recommended capabilities',
+    capabilities: [
+      'KNOWLEDGE_KNUPDATE_KNDELETE',
+      'KNOWLEDGE_KNUPLOAD',
+      'KNOWLEDGE_KNASKIMPORT',
+      'KNOWLEDGE_KNGETEXPORT_KNASKEXPORT',
+      'KNOWLEDGE_KNENRICHMENT',
+      'CONNECTORAPI',
+      'MODULES_MODMANAGE',
+      'STREAMAPI',
+      'SETTINGS_SETMARKINGS',
+    ],
+  });
 };
 
 const initializeDefaultValues = async () => {
